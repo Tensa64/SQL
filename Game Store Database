@@ -1,3 +1,5 @@
+--Create a game store database
+
 CREATE TABLE games(id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, console TEXT, price INTEGER);
 INSERT INTO games VALUES(1,"Nier Automata",5,3,"PS4",60);
 INSERT INTO games VALUES(2,"Halo Infinite",6,2,"Xbox Series X",70);
@@ -14,5 +16,9 @@ INSERT INTO games VALUES(12,"Super Mario Galaxy 2",3,5,"Wii",30);
 INSERT INTO games VALUES(13,"LOZ: BOTW",5,1,"Switch",60);
 INSERT INTO games VALUES(14,"LOZ: OoT",2,5,"Gamecube",30);
 INSERT INTO games VALUES(15,"Street Fighter 4",3,3,"PS4",40);
+
+--display the database ordered by price.
 SELECT * FROM games ORDER BY price ASC;
+
+--what is the quantity of games the store has?
 SELECT SUM(quantity) FROM games;
